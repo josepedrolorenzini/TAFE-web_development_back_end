@@ -60,3 +60,18 @@ The anticipation of multiple concurrent requests from the same client or fewer r
 The internal architecture of web servers may vary, ranging from single to multithreaded setups, with options for single or multiple listener threads.
 Each configuration offers unique approaches for accepting and distributing client connections among threads. While opting for an off-the-shelf web server confine one to its predetermined architecture, building a custom server from scratch grants 
 the freedom to tailor the architecture to specific requirements.
+third party api 
+Allow developers to incorporate functionality in sites from other content providers, such as Disqus or Facebook.
+
+
+
+React + Vite: Examples showcasing the use of React with Vite for efficient and modern frontend development.
+
+2
+Node.js: Scripts and examples demonstrating server-side JavaScript, including asynchronous programming, file system operations, and more.
+
+3
+Express: Examples of building RESTful APIs, handling middleware, and setting up server routes.
+
+4
+MongoDB: Database interaction examples, including CRUD operations, schema design, and data modelling.
