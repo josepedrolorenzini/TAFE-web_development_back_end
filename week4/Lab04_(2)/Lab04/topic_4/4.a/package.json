@@ -1,0 +1,24 @@
+{
+  "name": "topic4_4.a",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js" ,
+    "build:css": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "The code in this repository provides practical examples and additional resources that complement the theoretical concepts covered in the IATD Web Development (Back-End) course. By working through these code snippets and projects, you will be able to apply what you've learned in a hands-on manner.",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7",
+    "postcss": "^8.4.47"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}

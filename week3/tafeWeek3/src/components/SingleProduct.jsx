@@ -5,7 +5,7 @@ import data from '../data';
 
 export default function SingleProduct() {
     const { id } = useParams();
-    const product = data.find(p => p.id === parseInt(id));
+    const product = data.find( p => p.id === parseInt(id));
     console.log(product);
     if (!product) return <div>Product not found</div>;
 
