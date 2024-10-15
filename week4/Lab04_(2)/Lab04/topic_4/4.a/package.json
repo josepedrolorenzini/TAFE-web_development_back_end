@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js" ,
+    "start": "nodemon server.js",
     "build:css": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/styles.css --watch"
   },
   "keywords": [],
@@ -13,6 +13,7 @@
   "description": "The code in this repository provides practical examples and additional resources that complement the theoretical concepts covered in the IATD Web Development (Back-End) course. By working through these code snippets and projects, you will be able to apply what you've learned in a hands-on manner.",
   "dependencies": {
     "autoprefixer": "^10.4.20",
+    "cors": "^2.8.5",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
     "nodemon": "^3.1.7",

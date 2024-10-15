@@ -21,8 +21,11 @@
 const express = require('express'); // Import the Express library
 const app = express(); // Create an Express application
 const port = 3000; // Define the port number the server will listen on
+const cors = require('cors');
 
 app.use(express.json()); // Middleware to parse JSON bodies from incoming requests
+
+app.use(cors());
 
 /**
  * Array of expenses.
