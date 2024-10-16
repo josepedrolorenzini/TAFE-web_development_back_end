@@ -6,10 +6,11 @@ function FormExpenses() {
     const [category, setCategory] = useState('');
 
     const [formdetails, setFormDetails] = useState({
-        description: '',
-        amount: '' ,
-        category: '',
+        description : description,
+        amount : amount,
+        category : category,
       });
+
       function handleSubmit(event) {
         event.preventDefault();
         
@@ -20,36 +21,55 @@ function FormExpenses() {
         const querycategory = formData.get("category");
         
         // update the state with the new form data
-        setDescription(querydescription);
-        setAmount(queryamount);
-        setCategory(querycategory);
+        // setDescription(querydescription);
+        // setAmount(queryamount);
+        // setCategory(querycategory);
+
+        // adding content from post
+     
+      
   
         // update the state with the new form data
         setFormDetails((prevState) => {
           return {  
               ...prevState ,
-              description: querydescription ,
-              amount: queryamount ,
-              category: querycategory,
+              // description: setDescription(querydescription),
+              // amount:setAmount(queryamount) ,
+              // category: setCategory(querycategory),
+              description : querydescription, amount:queryamount, category:querycategory
            };
         });
-  
-        alert(`You searched for '${querydescription}'`);
-        console.log(formdetails);
+        // ... your API call here to send the form data to your server
+      
+          const blog = {description : querydescription, amount:queryamount, category:querycategory}
+          // Add your API call here to send the form data to your server
+          fetch("http://localhost:3000/expenses" , {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(blog)
+          }).then((response) => {
+            if(response.ok){
+               alert(`Form submitted successfully for: ${querydescription}`);
+               console.log(blog)
+               console.log(response)
+               console.log(formdetails);
+               return response.json();
+            } else {
+              alert('Form submission failed.');
+            }
+          }).catch((error) => console.error('Error:', error));
+          
+        
       }
  
     useEffect(() => {
         console.log('Form updated');
-        return(
-             description &&
-                  
-                  console.log('Form cleanup') ,
-                  console.log(description)  ,
-                  console.log(formdetails.amount) ,  
-                  console.log(formdetails.category) 
-           
-            // add dependencies to clean up on unmount
-        )
+        console.log(description, amount, category);
+ 
+       
+      
     }, [description, amount, category]);
   
     return (
@@ -57,9 +77,9 @@ function FormExpenses() {
       <h3> Search Form </h3>
       <p>Current Query: {description}</p>
       <form onSubmit={handleSubmit}>
-        <input name="description" placeholder='description'/><br></br>
-        <input name="amount" placeholder='amount'/><br></br>
-        <input name="category" placeholder='category'/><br></br>
+        <input name="description" placeholder='description' /><br></br>
+        <input name="amount" placeholder='amount'   /><br></br>
+        <input name="category" placeholder='category'    /><br></br>
         <button type="submit">send</button>
       </form>
       </>
