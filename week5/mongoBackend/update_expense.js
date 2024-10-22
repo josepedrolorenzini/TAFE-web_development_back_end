@@ -15,7 +15,7 @@ const expenseSchema = new mongoose.Schema({
 const Expenses = mongoose.model("Expense" ,expenseSchema);
 
 async function main(){
-    const uri = `mongodb+srv://joseplorenzini:${process.env.MongoDB_Key}@cluster0.rtrw8.mongodb.net/iatd_student_expense_tracker`;
+    const uri = `mongodb+srv://${process.env.MongoDB_username}:${process.env.MongoDB_Key}@cluster0.rtrw8.mongodb.net/iatd_student_expense_tracker`;
 
     try {
         await mongoose.connect(uri);

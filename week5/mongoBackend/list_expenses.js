@@ -18,7 +18,7 @@ const Expense = mongoose.model('Expense', expenseSchema);
 
 async function main() {
     try {
-        const uri = `mongodb+srv://joseplorenzini:${process.env.MongoDB_Key}@cluster0.rtrw8.mongodb.net/iatd_student_expense_tracker`;
+        const uri = `mongodb+srv://${process.env.MongoDB_username}:${process.env.MongoDB_Key}@cluster0.rtrw8.mongodb.net/iatd_student_expense_tracker`;
 
         await mongoose.connect(uri);
         console.log("Connected to MongoDB Atlas using Mongoose!");
