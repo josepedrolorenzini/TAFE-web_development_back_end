@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #512da8;
 }
 
 .container {
@@ -9,6 +10,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   padding-top: 70px; /* Adjust padding to account for the fixed nav */
+
 }
 
 h1 {
