@@ -2,3 +2,15 @@ node_modules/
 config.env
 week6\mern-momgodb\mern\server\db\connection.js
 .env
+
+
+# Ignore all .env files
+*.env
+
+# Ignore folders inside tafe
+week1/
+week2/
+week3/
+week4/
+week5/
+
