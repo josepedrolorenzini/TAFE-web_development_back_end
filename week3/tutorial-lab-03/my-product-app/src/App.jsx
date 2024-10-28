@@ -7,6 +7,9 @@ import productsData from './data';
 import './styles.css';
 import MyForm from './MyForm';
 import MyUsers from './MyUsers';
+import  Login  from './login/login';
+import Signup from './singup/SignUp';
+import Dashboard from './dashboard/Dashboard';
 
 const App = () => {
   const [products, setProducts] = useState(productsData);
@@ -32,6 +35,12 @@ const App = () => {
             <li>
               <Link to="/myusers">myUsers</Link>
             </li>
+            <li>
+              <Link to="/login">login</Link>
+            </li>
+            <li>
+              <Link to="/singup">sing up</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
@@ -39,6 +48,9 @@ const App = () => {
           <Route path="/new" element={<NewProduct addProduct={addProduct} />} />
           <Route path="/myForm" element={<MyForm />} />
           <Route path="/myUsers" element={<MyUsers />} />
+          <Route path="/login" element={<Login  title="my form" />} />
+          <Route path="/singup" element={<Signup />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </Router>
