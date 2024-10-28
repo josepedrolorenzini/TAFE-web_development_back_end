@@ -1,6 +1,8 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
+import dotenv from "dotenv";
+dotenv.config();
 
-const uri = process.env.DB || "mongodb+srv://joseplorenzini:CRvCmD6hGLaMddA7@cluster0.rtrw8.mongodb.net/employees";
+const uri = process.env.DB || "";
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -14,11 +16,12 @@ try {
   await client.connect();
   // Send a ping to confirm a successful connection
   await client.db("admin").command({ ping: 1 });
+  let someCollection = await client.db
   console.log(
    "Pinged your deployment. You successfully connected to MongoDB!"
   );
-  console.log(client.db("admin"))
-  client.close();
+   await  console.log(process.env.DB);
+ // client.close();
 } catch(err) {
   console.error(err);
 }
