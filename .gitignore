@@ -3,11 +3,13 @@
 *config.env
 
 # Ignore folders inside tafe
-week1/
-week2/
-week3/
-week4/
-week5/
+week1/node_modules/
+week2/node_modules/
+week3/node_modules/
+week3/authInMern/.env
+week3/authInMern/db.js
+week4/node_modules/
+week5/node_modules/
 
 # Ignore all .env files
 *.env
