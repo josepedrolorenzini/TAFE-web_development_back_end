@@ -13,7 +13,7 @@ week5/
 *.env
 
 # Ignore node_modules directories
-node_modules/
+node_modules/*
 
 # Ignore all composer files
 composer/
