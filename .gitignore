@@ -10,7 +10,9 @@ week3/authInMern/.env
 week3/authInMern/db.js
 week4/node_modules/
 week5/node_modules/
-
+/week6/Lab06_(2)/Lab06/products-app-node/node_modules/*
+/week6/Lab06_(2)/Lab06/products-app-node/.env
+/week6/Lab06_(2)/Lab06/my-product-app-react/node_modules/*
 # Ignore all .env files
 *.env
 
@@ -22,3 +24,4 @@ composer/
 
 # Ignore specific file in week6 folder
 week6/mern-momgodb/mern/server/db/connection.js
+

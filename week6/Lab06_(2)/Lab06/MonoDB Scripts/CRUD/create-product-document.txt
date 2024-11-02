@@ -1,7 +1,0 @@
-db.products.insertOne({ 
-  name: "Laptop", 
-  description: "A high-performance laptop", 
-  price: 1500, 
-  category: "Electronics", 
-  createdAt: new Date() 
-}) 

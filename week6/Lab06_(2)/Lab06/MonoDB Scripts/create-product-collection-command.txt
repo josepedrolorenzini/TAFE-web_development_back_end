@@ -1,2 +1,0 @@
-use productApp 
-db.createCollection("products") 

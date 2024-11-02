@@ -1,4 +1,0 @@
-db.products.updateOne( 
-  { name: "Laptop" }, 
-  { $set: { price: 1400 } } 
-) 
