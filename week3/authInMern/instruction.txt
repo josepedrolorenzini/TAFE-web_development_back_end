@@ -1,0 +1,3 @@
+https://youtu.be/HGgyd1bYWsE?si=gbmNuCIIFPYcHVrS
+
+npm i express mongoose dotenv nodemon cors

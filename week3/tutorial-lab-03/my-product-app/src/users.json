@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "email": "user1@example.com",
+      "password": "password123",
+      "id": "f3ae"
+    },
+    {
+      "email": "user2@example.com",
+      "password": "mySecretPass",
+      "id": "8658"
+    },
+    {
+      "email": "user3@example.com",
+      "password": "p@ssw0rd!",
+      "id": "3c4c"
+    },
+    {
+      "email": "user4@example.com",
+      "password": "securePassword2024",
+      "id": "d80b"
+    },
+    {
+      "id": "b87a",
+      "email": "jsjsjjs",
+      "password": "jsjjshshhshs"
+    }
+  ]
+}
