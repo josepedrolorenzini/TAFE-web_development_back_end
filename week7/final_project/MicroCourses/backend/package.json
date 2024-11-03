@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "codemon": "^0.1.31-development",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.8.0"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+     "start": "nodemon server.js"
+  },
+  "type" :"module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
