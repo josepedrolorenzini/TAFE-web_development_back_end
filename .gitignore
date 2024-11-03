@@ -13,6 +13,10 @@ week5/node_modules/
 /week6/Lab06_(2)/Lab06/products-app-node/node_modules/*
 /week6/Lab06_(2)/Lab06/products-app-node/.env
 /week6/Lab06_(2)/Lab06/my-product-app-react/node_modules/*
+/week7/final_project/MicroCourses/*/node_modules
+/week7/final_project/MicroCourses/*/.env
+
+
 # Ignore all .env files
 *.env
 
@@ -24,4 +28,12 @@ composer/
 
 # Ignore specific file in week6 folder
 week6/mern-momgodb/mern/server/db/connection.js
+
+# ignore specific folder week7/Final project / microcourses
+# backend
+/week7/final_project/MicroCourses/backend/node_modules
+/week7/final_project/MicroCourses/backend/.env
+# frontend 
+/week7/final_project/MicroCourses/frontend/node_modules
+/week7/final_project/MicroCourses/frontend/.env
 
