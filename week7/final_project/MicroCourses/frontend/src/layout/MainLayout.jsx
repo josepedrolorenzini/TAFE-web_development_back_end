@@ -56,7 +56,7 @@ function MainLayout({ children }) {
                 <div className="flex-shrink-0">
                   <img
                     alt="Your Company"
-                    src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+                    src="https://laravel.com/img/logomark.min.svg"
                     className="h-8 w-8"
                   />
                 </div>

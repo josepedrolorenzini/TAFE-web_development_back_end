@@ -34,7 +34,6 @@ function Courses({title}) {
     <> { loading ?   <Spinner loading={loading} /> :
       <div className='container mx-auto'>
       <h1>{title}</h1>
-       Courses
        {courses.map( (course) =>{
            
            return (

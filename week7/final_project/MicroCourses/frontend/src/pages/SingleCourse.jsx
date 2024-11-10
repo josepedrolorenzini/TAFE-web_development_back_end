@@ -19,12 +19,13 @@ function SingleCourse({id}) {
   return (
     <>
     <h1 className='text-cyan-950 font-bold'> Course Details</h1>
-    <div>
+    <div className='mb-4'>
     <b>{course.title}</b>
     <p>{course.description}</p>
-    <img src={course.image} ></img>
+    <img src={course.image} 
+    className='w-24'></img>
     </div>
-    <Link to="/courses" className='text-cyan-950 hover:text-cyan-800'>Back to Home</Link>
+    <Link to="/courses" className='h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm mt-8'>Back to Home</Link>
     </>
   )
 }
