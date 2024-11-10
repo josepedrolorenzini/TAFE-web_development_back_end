@@ -2,7 +2,10 @@ import React from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Navbar from '../Navbar/Navbar'
-import { Outlet , useParams} from 'react-router-dom'
+import { Outlet , useLocation } from 'react-router-dom'
+import Header from '../components/Header'
+import BannerSlider from '../components/BannerSlider'
+
 
 
 const user = {
@@ -13,10 +16,8 @@ const user = {
 }
 const navigation = [
   { name: 'Homepage', href: '/', current: true },
-  { name: 'courses', href: '/courses', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-  { name: 'Reports', href: '#', current: false },
+  { name: 'Courses', href: '/courses', current: false },
+  { name: 'Add Courses', href: '/addcourses', current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -27,7 +28,23 @@ const userNavigation = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-function MainLayout({title}) {
+const getTitleFromPath = (path) =>{
+    switch(path){
+        case '/':
+            return 'Home';
+        case '/courses':
+            return 'Courses';
+        case '/addcourses':
+            return 'Add Courses';
+        default:
+            return 'Page Not Found';
+    }
+}
+function MainLayout({ children }) {
+    const location = useLocation();
+   const titulo = getTitleFromPath(location.pathname);
+   console.log(location)
+   // const title = location.pathname ;
   return (
     <>
 
@@ -153,11 +170,12 @@ function MainLayout({title}) {
           </DisclosurePanel>
         </Disclosure>
 
-        <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">{title}</h1>
-          </div>
-        </header>
+      <Header 
+      title={titulo}
+      //title={title == '/' ? 'Home page' : title.charAt(1).toUpperCase()  + title.slice(2)} 
+      />
+      <BannerSlider isHome={true}/>
+      {children}
         <main>
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8"><Outlet/></div>
         </main>

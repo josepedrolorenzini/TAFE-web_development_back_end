@@ -7,10 +7,18 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+#folders 
 node_modules
 dist
 dist-ssr
 *.local
+src/pages/addCourse3.jsx
+src/pages/addCourses2.jsx
+src/pages/addCourses4.jsx
+src/pages/addCourses-bkp-original.jsx
+src/pages/addCourse5-bkp.jsx
+../backend/node_modules/*
+*.env
 
 # Editor directories and files
 .vscode/*

@@ -6,7 +6,6 @@ export const connectDB = async () => {
    const url = process.env.MongoDB ;
    const client = new MongoClient(url);
 
-
    try {
         const conn = await client.connect(process.env.MongoDB)
         console.log("Successfully connected to MongoDB.");
@@ -17,5 +16,6 @@ export const connectDB = async () => {
       console.error(`Error connecting to MongoDB: ${error.message}`)
       process.exit(1); // 1 means error and 0 means failure
    }
+   
 }
 
